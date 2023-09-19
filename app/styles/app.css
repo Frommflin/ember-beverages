@@ -4,6 +4,7 @@
   --text: #e4e3db;
   --primary: #2c331c;
   --primary-light: #424a31;
+  --primary-light-vibrant: #9bad72;
   --secondary: #023732;
 }
 
@@ -53,8 +54,8 @@ nav ul {
   margin: 10px 0;
   min-width: 400px;
   box-shadow:
-    0 4px 8px 0 rgba(0 0 0 20%),
-    0 6px 20px 0 rgba(0 0 0 19%);
+    0 4px 8px 0 rgba(0 0 0 / 20%),
+    0 6px 20px 0 rgba(0 0 0 / 19%);
 }
 
 .beverage-card div:last-child {
@@ -63,4 +64,22 @@ nav ul {
 
 .beverage-card img {
   height: 100px;
+}
+
+.beverage-details{
+  border: 1px solid var(--primary-light);
+  padding: 20px;
+}
+
+.beverage-details img{
+  max-height: 400px;
+}
+
+.beverage-details .details{
+  margin-bottom: 10px;
+}
+
+.beverage-details .details span{
+  font-weight: bold;
+  color: var(--primary-light-vibrant);
 }
