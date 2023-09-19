@@ -42,7 +42,15 @@ nav ul {
 .flex-page {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+}
+
+.beverage-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  height: 700px;
+  width: 900px;
+  margin-right: 50px;
 }
 
 .beverage-card {
@@ -51,8 +59,9 @@ nav ul {
   display: flex;
   flex-direction: row;
   padding: 10px;
-  margin: 10px 0;
-  min-width: 400px;
+  margin: 10px;
+  width: 400px;
+  height: 100px;
   box-shadow:
     0 4px 8px 0 rgba(0 0 0 / 20%),
     0 6px 20px 0 rgba(0 0 0 / 19%);
