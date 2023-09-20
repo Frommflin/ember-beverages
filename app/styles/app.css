@@ -36,7 +36,8 @@ nav ul {
   list-style-type: none;
 }
 
-nav a, nav a:visited {
+nav a,
+nav a:visited {
   color: var(--text);
   text-decoration: none;
 }
