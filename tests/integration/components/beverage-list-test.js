@@ -12,15 +12,6 @@ module('Integration | Component | beverage-list', function (hooks) {
 
     await render(hbs`<BeverageList />`);
 
-    assert.dom().hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <BeverageList>
-        template block text
-      </BeverageList>
-    `);
-
-    assert.dom().hasText('template block text');
+    assert.dom('.beverage-list').exists();
   });
 });
