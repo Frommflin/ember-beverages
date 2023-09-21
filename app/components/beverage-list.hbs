@@ -1,6 +1,9 @@
 <div class="beverage-list">
-  <Beverage/>
-  <Beverage/>
-  <Beverage/>
-  <Beverage/>
+  {{#if @model.beverages}}
+    {{#each @model.beverages as |beverage|}}
+      <Beverage @beverage={{beverage}} />
+    {{/each}}
+  {{else}}
+    <div>Issues loading data</div>
+  {{/if}}
 </div>
