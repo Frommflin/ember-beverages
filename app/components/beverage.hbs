@@ -1,4 +1,4 @@
-<button type="button" class="beverage-card" {{on 'click' ( fn @checkId @beverage.id )}} >
+<button type="button" class="beverage-card" {{on 'click' ( fn @getBeverage @beverage )}} >
   <img src="{{@beverage.image_url}}" alt="{{@beverage.name}}">
   <div>
     <div class="h3">{{@beverage.name}}</div>

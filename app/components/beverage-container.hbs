@@ -3,6 +3,6 @@
     <button type="button">Show 10 beverages</button>
 {{/unless}}
 <div class="flex-page">
-  <BeverageList @model={{@model}} @checkBevId={{this.showBeverageDetails}}/>
-  <BeverageDetails @isFavourite={{@isFav}}/>
+  <BeverageList @model={{@model}} @checkBev={{this.showBeverageDetails}}/>
+  <BeverageDetails @isFavourite={{@isFav}} @beverageId={{this.id}} @beverage={{this.beverage}} />
 </div>

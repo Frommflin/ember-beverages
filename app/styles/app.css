@@ -65,6 +65,7 @@ nav a:visited {
   height: 700px;
   width: 900px;
   margin-right: 50px;
+  overflow: auto;
 }
 
 .beverage-card {
@@ -96,10 +97,12 @@ nav a:visited {
 .beverage-details {
   border: 1px solid var(--primary-light);
   padding: 20px;
+  width: 500px;
+  height: 700px;
 }
 
 .beverage-details img {
-  max-height: 400px;
+  height: 300px;
 }
 
 .beverage-details .details {

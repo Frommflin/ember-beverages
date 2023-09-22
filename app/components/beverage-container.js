@@ -3,11 +3,12 @@ import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 
 export default class BeverageContainerComponent extends Component {
-  @tracked beverageID = 0;
+  @tracked beverage = null;
+  @tracked id = 0;
 
   @action
-  showBeverageDetails(id) {
-    this.beverageID = id;
-    alert(`ID for clicked beverage is: ${id}`);
+  showBeverageDetails(bev) {
+    this.beverage = bev;
+    this.id = bev.id;
   }
 }

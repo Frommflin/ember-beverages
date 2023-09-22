@@ -1,15 +1,20 @@
+
 <div class="beverage-details">
-  <img src="#" alt="Beverage">
-  <h2>Name</h2>
-  <p>Beverage description</p>
-  <div class="details">
-    <span>Volume: </span> Beverage volume and unit
-  </div>
-  <div class="details">
-    <span>Goes well with: </span> Beverage food pairings
-  </div>
-  <div class="details">
-    <span>Brewer's tips: </span> tips from brewer
-  </div>
-  <button type="button">{{if @isFavourite "Remove from Favourites" "Save as Favourite"}}</button>
+  {{#if @beverageId}}
+    <img src="{{@beverage.image_url}}" alt="{{@beverage.name}}">
+    <h2>{{@beverage.name}}</h2>
+    <p>{{@beverage.description}}</p>
+    <div class="details">
+      <span>Volume: </span> {{@beverage.volume.value}} {{@beverage.volume.unit}}
+    </div>
+    <div class="details">
+      <span>Goes well with: </span> {{@beverage.food_pairing}}
+    </div>
+    <div class="details">
+      <span>Brewer's tips: </span> {{@beverage.brewers_tips}}
+    </div>
+    <button type="button">{{if @isFavourite "Remove from Favourites" "Save as Favourite"}}</button>
+  {{else}}
+    <div>Click on a beverage to show some details</div>
+  {{/if}}
 </div>
