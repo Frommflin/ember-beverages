@@ -1,7 +1,7 @@
 <div class="beverage-list">
   {{#if @model.beverages}}
     {{#each @model.beverages as |beverage|}}
-      <Beverage @beverage={{beverage}} />
+      <Beverage @beverage={{beverage}} @checkId={{@checkBevId}}/>
     {{/each}}
   {{else}}
     <div>Issues loading data</div>

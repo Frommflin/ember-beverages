@@ -1,9 +1,7 @@
 {{page-title "Favourites"}}
 
 <div>
-  <h1>Favourites</h1>
-  <div class="flex-page">
-    <BeverageList/>
-    <BeverageDetails @isFavourite={{true}}/>
-  </div>
+  <BeverageContainer @isFav={{true}}>
+    Favourites
+  </BeverageContainer>
 </div>

@@ -1,7 +1,7 @@
-<div class="beverage-card">
+<button type="button" class="beverage-card" {{on 'click' ( fn @checkId @beverage.id )}} >
   <img src="{{@beverage.image_url}}" alt="{{@beverage.name}}">
   <div>
-    <h3>{{@beverage.name}}</h3>
+    <div class="h3">{{@beverage.name}}</div>
     <p>{{@beverage.tagline}}</p>
   </div>
-</div>
+</button>

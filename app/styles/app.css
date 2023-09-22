@@ -17,6 +17,13 @@ body {
   overflow-x: hidden;
 }
 
+.h3 {
+  display: block;
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
 nav {
   background-color: var(--primary);
   position: absolute;
@@ -62,16 +69,20 @@ nav a:visited {
 
 .beverage-card {
   background-color: var(--primary);
+  border: 0;
   border-radius: 20px;
+  color: var(--text);
   display: flex;
   flex-direction: row;
   padding: 10px;
   margin: 10px;
-  width: 400px;
-  height: 100px;
+  width: 420px;
+  height: 120px;
   box-shadow:
     0 4px 8px 0 rgba(0 0 0 / 20%),
     0 6px 20px 0 rgba(0 0 0 / 19%);
+  font-family: "Times New Roman", Times, serif;
+  text-align: left;
 }
 
 .beverage-card div:last-child {

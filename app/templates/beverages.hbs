@@ -1,9 +1,6 @@
 
 <div>
-  <h1>Beverages</h1>
-  <button type="button">Show 10 new beverages</button>
-  <div class="flex-page">
-    <BeverageList @model={{@model}} />
-    <BeverageDetails @isFavourite={{false}}/>
-  </div>
+  <BeverageContainer @model={{@model}} @isFav={{false}}>
+    Beverages
+  </BeverageContainer>
 </div>
