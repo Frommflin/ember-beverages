@@ -1,7 +1,6 @@
 # ember-beverages
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This Ember application collects different beers from an open API and shows information about them. By clicking on a beverage card you can see a more detailed view. From the details you can chose to save that beverage to your favorites, or remove it from the fanorites if its already there.
 
 ## Prerequisites
 
@@ -14,7 +13,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/Frommflin/ember-beverages`
 * `cd ember-beverages`
 * `npm install`
 
@@ -42,10 +41,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 * `ember build` (development)
 * `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
 
 ## Further Reading / Useful Links
 
