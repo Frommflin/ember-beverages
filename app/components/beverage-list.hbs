@@ -1,9 +1,15 @@
 <div class="beverage-list">
-  {{#if @model.beverages}}
-    {{#each @model.beverages as |beverage|}}
-      <Beverage @beverage={{beverage}} @getBeverage={{@checkBev}}/>
-    {{/each}}
+  {{#if @firstVisit}}
+    <div class="notice">Click on the button to show beverages</div>
   {{else}}
-    <div>Issues loading data</div>
+    {{#if @model}}
+      {{#each @model as |beverage|}}
+        <Beverage @beverage={{beverage}} @getBeverage={{@checkBev}}/>
+      {{/each}}
+    {{else}}
+      <div class="notice">Issues loading data</div>
+    {{/if}}
   {{/if}}
+
+
 </div>

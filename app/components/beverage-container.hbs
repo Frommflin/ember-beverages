@@ -1,8 +1,9 @@
+
 <h1>{{yield}}</h1>
 {{#unless @isFav}}
-    <button type="button">Show 10 beverages</button>
+    <button type="button" {{ on 'click' this.getBeverageList }} >Show 10 beverages</button>
 {{/unless}}
 <div class="flex-page">
-  <BeverageList @model={{@model}} @checkBev={{this.showBeverageDetails}}/>
+  <BeverageList @firstVisit={{this.justLoaded}} @model={{this.beverageList}} @checkBev={{this.showBeverageDetails}}/>
   <BeverageDetails @isFavourite={{@isFav}} @beverageId={{this.id}} @beverage={{this.beverage}} />
 </div>
