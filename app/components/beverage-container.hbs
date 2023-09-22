@@ -5,9 +5,9 @@
 {{/unless}}
 <div class="flex-page">
   {{#if @isFav}}
-  <BeverageList @isFavourite={{@isFav}} @firstVisit={{false}} @model={{@model}} @checkBev={{this.showBeverageDetails}}/>
+  <BeverageList @isFavorite={{@isFav}} @firstVisit={{false}} @model={{@model}} @checkBev={{this.showBeverageDetails}}/>
   {{else}}
-  <BeverageList @isFavourite={{@isFav}} @firstVisit={{this.justLoaded}} @model={{this.beverageList}} @checkBev={{this.showBeverageDetails}}/>
+  <BeverageList @isFavorite={{@isFav}} @firstVisit={{this.justLoaded}} @model={{this.beverageList}} @checkBev={{this.showBeverageDetails}}/>
   {{/if}}
-  <BeverageDetails @isFavourite={{@isFav}} @beverageId={{this.id}} @beverage={{this.beverage}} @clearDetails={{this.showBeverageDetails}} />
+  <BeverageDetails @isFavorite={{this.favMarked}} @beverageId={{this.id}} @beverage={{this.beverage}} @clearDetails={{this.showBeverageDetails}} @favState={{this.checkFavState}} />
 </div>

@@ -3,15 +3,15 @@ import { service } from '@ember/service';
 import { action } from '@ember/object';
 
 export default class BeverageDetailsComponent extends Component {
-  @service('favourite-beverages') favourites;
+  @service('favorite-beverages') favorites;
 
   @action
-  saveFavourite(beverage) {
-    this.favourites.add(beverage);
+  saveFavorite(beverage) {
+    this.favorites.add(beverage);
   }
 
   @action
-  removeFavourite(beverage) {
-    this.favourites.remove(beverage);
+  removeFavorite(beverage) {
+    this.favorites.remove(beverage);
   }
 }

@@ -1,12 +1,15 @@
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
+import { service } from '@ember/service';
 
 export default class BeverageContainerComponent extends Component {
+  @service favouritBeverages;
   @tracked beverage = null;
   @tracked id = 0;
   @tracked beverageList = [];
   @tracked justLoaded = true;
+  @tracked favMarked = false;
 
   //Walking the array in reverse, switching each element with a random element before it
   shuffle(array) {
@@ -18,9 +21,20 @@ export default class BeverageContainerComponent extends Component {
   }
 
   @action
+  checkFavState(beverage) {
+    let favsArray = this.favoriteBeverages.show();
+    if (favsArray.find((bev) => bev.id == beverage.id)) {
+      this.favMarked = true;
+    } else {
+      this.favMarked = false;
+    }
+  }
+
+  @action
   showBeverageDetails(bev) {
     this.beverage = bev;
     this.id = bev.id;
+    this.checkFavState(bev);
   }
 
   @action
