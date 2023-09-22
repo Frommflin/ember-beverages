@@ -4,6 +4,10 @@
     <button type="button" {{ on 'click' this.getBeverageList }} >Show 10 beverages</button>
 {{/unless}}
 <div class="flex-page">
-  <BeverageList @firstVisit={{this.justLoaded}} @model={{this.beverageList}} @checkBev={{this.showBeverageDetails}}/>
-  <BeverageDetails @isFavourite={{@isFav}} @beverageId={{this.id}} @beverage={{this.beverage}} />
+  {{#if @isFav}}
+  <BeverageList @isFavourite={{@isFav}} @firstVisit={{false}} @model={{@model}} @checkBev={{this.showBeverageDetails}}/>
+  {{else}}
+  <BeverageList @isFavourite={{@isFav}} @firstVisit={{this.justLoaded}} @model={{this.beverageList}} @checkBev={{this.showBeverageDetails}}/>
+  {{/if}}
+  <BeverageDetails @isFavourite={{@isFav}} @beverageId={{this.id}} @beverage={{this.beverage}} @clearDetails={{this.showBeverageDetails}} />
 </div>

@@ -11,4 +11,8 @@ export default class FavouriteBeveragesService extends Service {
   remove(beverage) {
     this.favourites.removeObject(beverage);
   }
+
+  show() {
+    return this.favourites;
+  }
 }

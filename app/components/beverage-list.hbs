@@ -7,7 +7,7 @@
         <Beverage @beverage={{beverage}} @getBeverage={{@checkBev}}/>
       {{/each}}
     {{else}}
-      <div class="notice">Issues loading data</div>
+      <div class="notice">{{if @isFavourite "You havent saved any favourites" "Issues loading data"}}</div>
     {{/if}}
   {{/if}}
 

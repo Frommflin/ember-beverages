@@ -13,7 +13,11 @@
     <div class="details">
       <span>Brewer's tips: </span> {{@beverage.brewers_tips}}
     </div>
-    <button type="button">{{if @isFavourite "Remove from Favourites" "Save as Favourite"}}</button>
+    {{#if @isFavourite}}
+      <button type="button" {{on 'click' ( fn this.removeFavourite @beverage ) }} {{on 'click' ( fn @clearDetails 0 ) }}>Remove from Favourites</button>
+    {{else}}
+      <button type="button" {{on 'click' ( fn this.saveFavourite @beverage )}}>Save as Favourite</button>
+    {{/if}}
   {{else}}
     <div>Click on a beverage to show some details</div>
   {{/if}}
