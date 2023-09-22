@@ -41,5 +41,6 @@ export default class BeverageContainerComponent extends Component {
     });
     this.beverageList = selectedBeveragesArray;
     this.justLoaded = false;
+    this.id = 0;
   }
 }
