@@ -13,7 +13,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone https://github.com/Frommflin/ember-beverages`
+* `git clone https://github.com/Frommflin/ember-beverages.git`
 * `cd ember-beverages`
 * `npm install`
 
