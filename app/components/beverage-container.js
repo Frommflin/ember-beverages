@@ -4,7 +4,7 @@ import { action } from '@ember/object';
 import { service } from '@ember/service';
 
 export default class BeverageContainerComponent extends Component {
-  @service favouritBeverages;
+  @service favoriteBeverages;
   @tracked beverage = null;
   @tracked id = 0;
   @tracked beverageList = [];
